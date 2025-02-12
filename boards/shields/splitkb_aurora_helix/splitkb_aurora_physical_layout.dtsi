@@ -3,8 +3,8 @@
     physical_layout: physical_layout_0 {
         compatible = "zmk,physical-layout";
         display-name = "Aurora Helix";
-        transform = <&default_transform>;
-        kscan = <&mock_kscan>; 
+        /* transform = <&default_transform>;
+        kscan = <&mock_kscan>; */
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100    0    0       0     0     0>
             , <&key_physical_attrs 100 100  100    0       0     0     0>
