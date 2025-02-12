@@ -1,6 +1,6 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
-#import "splitkb_aurora_physical_layout.dtsi"
+#include "splitkb_aurora_physical_layout.dtsi"
 
 &physical_layout {
     transform = <&default_transform>;
