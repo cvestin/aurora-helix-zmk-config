@@ -23,14 +23,4 @@ config BT_MAX_CONN
 config BT_MAX_PAIRED
     default 6
 
-
-#
-# Uncomment the following line to enable the OLED Display
-config ZMK_DISPLAY
-    default y
-
-# Uncomment the following line to enable RGB underglow
-config ZMK_RGB_UNDERGLOW
-    default n
-
 endif
