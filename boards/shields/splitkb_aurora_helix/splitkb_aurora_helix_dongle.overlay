@@ -8,6 +8,7 @@
 
 / {
     chosen {
+        zephyr,display = &oled;
         zmk,kscan = &mock_kscan;
         zmk,physical-layout = &physical_layout;
     };
@@ -36,5 +37,47 @@
         RC(4,0) RC(4,1) RC(4,2) RC(4,3) RC(4,4) RC(4,5) RC(4,6) RC(4,7) RC(4,8) RC(4,9) RC(4,10) RC(4,11) RC(4,12) RC(4,13)
         >;
     };
-    
+    left_encoder: left_encoder {
+        compatible = "alps,ec11";
+        steps = <144>;
+        status = "disabled";
+
+        a-gpios = <&pro_micro 7 GPIO_PULL_UP>;
+        b-gpios = <&pro_micro 8 GPIO_PULL_UP>;
+    };
+
+    right_encoder: right_encoder {
+        compatible = "alps,ec11";
+        steps = <144>;
+        status = "disabled";
+
+        a-gpios = <&pro_micro 16 GPIO_PULL_UP>;
+        b-gpios = <&pro_micro 14 GPIO_PULL_UP>;
+    };
+
+    sensors: sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder &right_encoder>;
+        triggers-per-rotation = <36>;
+    };
+};
+
+&pro_micro_i2c {
+    status = "okay";
+
+    oled: ssd1306@3c {
+        compatible = "solomon,ssd1306fb";
+        reg = <0x3c>;
+        width = <128>;
+        height = <32>;
+        segment-offset = <0>;
+        page-offset = <0>;
+        display-offset = <0>;
+        multiplex-ratio = <31>;
+        segment-remap;
+        com-invdir;
+        com-sequential;
+        inversion-on;
+        prechargep = <0x22>;
+    };
 };
