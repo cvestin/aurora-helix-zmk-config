@@ -27,6 +27,9 @@ config ZMK_RGB_UNDERGLOW
     select WS2812_STRIP
     select SPI
 
+choice ZMK_DISPLAY
+    default y
+
 if ZMK_DISPLAY
 
 config SSD1306
@@ -54,8 +57,6 @@ endchoice
 
 endif # LVGL
 
-choice ZMK_DISPLAY
-    default y
 endif
 
 if SHIELD_SPLITKB_AURORA_HELIX_LEFT || SHIELD_SPLITKB_AURORA_HELIX_RIGHT
@@ -67,6 +68,9 @@ config ZMK_RGB_UNDERGLOW
     select WS2812_STRIP
     select SPI
 
+choice ZMK_RGB_UNDERGLOW
+    default y
+
 if ZMK_DISPLAY
 
 config SSD1306
@@ -93,8 +97,5 @@ choice LV_COLOR_DEPTH
 endchoice
 
 endif # LVGL
-
-choice ZMK_RGB_UNDERGLOW
-    default y
 
 endif # SHIELD_SPLITKB_AURORA_HELIX_LEFT || SHIELD_SPLITKB_AURORA_HELIX_RIGHT
