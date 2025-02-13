@@ -54,6 +54,8 @@ endchoice
 
 endif # LVGL
 
+choice ZMK_DISPLAY
+    default y
 endif
 
 if SHIELD_SPLITKB_AURORA_HELIX_LEFT || SHIELD_SPLITKB_AURORA_HELIX_RIGHT
@@ -91,5 +93,8 @@ choice LV_COLOR_DEPTH
 endchoice
 
 endif # LVGL
+
+choice ZMK_RGB_UNDERGLOW
+    default y
 
 endif # SHIELD_SPLITKB_AURORA_HELIX_LEFT || SHIELD_SPLITKB_AURORA_HELIX_RIGHT
