@@ -1,1 +1,1 @@
-# cv-aurora-helix-zmk-config
+# zmk-config for splitkb.com's Aurora Helix
