@@ -72,8 +72,8 @@
             , <&key_physical_attrs 100 100  1300   400     0     0     0>
         ;
     };
-    
-    &layouts_splitkb_aurora_helix_position_map {
+};
+&layouts_splitkb_aurora_helix_position_map {
     splitkb_aurora_helix: splitkb_aurora_helix_0 {
         physical-layout = <&physical_layout>;
         positions
