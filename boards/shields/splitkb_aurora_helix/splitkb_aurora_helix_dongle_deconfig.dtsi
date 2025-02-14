@@ -23,4 +23,14 @@ config BT_MAX_CONN
 config BT_MAX_PAIRED
     default 6
 
+if ZMK_DISPLAY
+
+config SSD1306
+    default y
+
+config I2C
+    default y
+
+endif # ZMK_DISPLAY
+
 endif
