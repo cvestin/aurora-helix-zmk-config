@@ -6,7 +6,7 @@ This repository extens the existing configuraton to enable the use of ZMK Studio
 ## ZMK Studio
 - [ ] Create physical layout
   - [x] Basic keyboard layout
-  - [ ] Add rotary encoders
+  - [ ] Rotary encoders
 - [ ] Position map 
   - [x] 5 row
   - [ ] 4 row
@@ -23,4 +23,4 @@ This repository extens the existing configuraton to enable the use of ZMK Studio
 - [ ] Layer indication
 
 ## MCU LED Indicators
-- [ ] Add controls
+- [ ] Configure
