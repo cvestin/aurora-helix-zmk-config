@@ -33,18 +33,6 @@ config I2C
 
 endif # ZMK_DISPLAY
 
-endif
-
-
-
-if SHIELD_SPLITKB_AURORA_HELIX_LEFT || SHIELD_SPLITKB_AURORA_HELIX_RIGHT
-
-config ZMK_SPLIT
-    default y
-
-config ZMK_RGB_UNDERGLOW
-    select WS2812_STRIP
-    select SPI
 
 if LVGL
 
@@ -62,5 +50,19 @@ choice LV_COLOR_DEPTH
 endchoice
 
 endif # LVGL
+
+
+endif
+
+
+
+if SHIELD_SPLITKB_AURORA_HELIX_LEFT || SHIELD_SPLITKB_AURORA_HELIX_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+config ZMK_RGB_UNDERGLOW
+    select WS2812_STRIP
+    select SPI
 
 endif # SHIELD_SPLITKB_AURORA_HELIX_LEFT || SHIELD_SPLITKB_AURORA_HELIX_RIGHT
