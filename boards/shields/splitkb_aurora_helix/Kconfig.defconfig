@@ -23,7 +23,6 @@ config BT_MAX_CONN
 config BT_MAX_PAIRED
     default 6
 
-
 if ZMK_DISPLAY
 
 config SSD1306
@@ -35,6 +34,7 @@ config I2C
 endif # ZMK_DISPLAY
 
 endif
+
 
 
 if SHIELD_SPLITKB_AURORA_HELIX_LEFT || SHIELD_SPLITKB_AURORA_HELIX_RIGHT
