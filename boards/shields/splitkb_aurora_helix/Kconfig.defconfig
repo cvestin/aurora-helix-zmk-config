@@ -23,6 +23,17 @@ config BT_MAX_CONN
 config BT_MAX_PAIRED
     default 6
 
+
+if ZMK_DISPLAY
+
+config SSD1306
+    default y
+
+config I2C
+    default y
+
+endif # ZMK_DISPLAY
+
 endif
 
 
@@ -34,16 +45,6 @@ config ZMK_SPLIT
 config ZMK_RGB_UNDERGLOW
     select WS2812_STRIP
     select SPI
-
-if ZMK_DISPLAY
-
-config SSD1306
-    default y
-
-config I2C
-    default y
-
-endif # ZMK_DISPLAY
 
 if LVGL
 
