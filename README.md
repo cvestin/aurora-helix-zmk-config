@@ -21,3 +21,6 @@ This repository extens the existing configuraton to enable the use of ZMK Studio
   - [ ] Num Lock
   - [ ] Scroll Lock
 - [ ] Layer indication
+
+## MCU LED Indicators
+- [ ] Add controls
