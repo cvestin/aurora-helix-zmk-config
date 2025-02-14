@@ -1,5 +1,6 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
+#include "splitkb_aurora_helix.dtsi"
 #include "splitkb_aurora_helix_physical_layout.dtsi"
 
 &physical_layout {
