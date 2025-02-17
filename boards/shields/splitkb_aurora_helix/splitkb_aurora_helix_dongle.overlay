@@ -21,3 +21,6 @@
     };
 };
 
+&physical_layout {
+    transform = <&default_transform>;
+};
