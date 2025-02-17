@@ -4,12 +4,8 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "splitkb_aurora_helix_physical_layout.dtsi"
 #include "splitkb_aurora_helix.dtsi"
-
-&physical_layout {
-    transform = <&default_transform>;
-};
+#include "splitkb_aurora_helix_physical_layout.dtsi"
 
 / {
     chosen {
@@ -23,4 +19,8 @@
         rows = <5>;
         events = <0>;
     };
+};
+
+&physical_layout {
+    transform = <&default_transform>;
 };
