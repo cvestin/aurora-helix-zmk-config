@@ -18,12 +18,14 @@
 #define NUMPAD 4
 
 /* Uncomment this block if using RGB */
+
 &led_strip {
-       // chain-length = <6>;
-       chain-length = <38>; // Uncomment if using both per-key and underglow LEDs
-       // chain-length = <32>; // Uncomment if using only per-key LEDs.
+    // chain-length = <6>;
+
+    chain-length = <38>; // Uncomment if using both per-key and underglow LEDs
+    // chain-length = <32>; // Uncomment if using only per-key LEDs.
 };
- 
+
 /* NOTE: At the time of the creation of this keymap, there are no specified codes for 'eisuu' and 'kana' input in ZMK.
 However, 'LANG1' and 'LANG2' are fully-functioning candidates for 'kana' and 'eisuu' input respectively.
 As such, those are in use within the default layer at this time.*/
@@ -91,11 +93,11 @@ As such, those are in use within the default layer at this time.*/
             // |      |      |      |      |      |      |      |                    |      |      |      |      |      |      |      |
 
             bindings = <
-&trans          &trans    &trans  &trans    &trans    &trans                           &trans     &trans     &trans     &trans    &trans    &trans
-&kp TILDE       &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                        &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp DELETE
-&trans          &trans    &trans  &trans    &trans    &trans                           &trans     &kp UNDER  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE
-&trans          &trans    &trans  &trans    &trans    &trans     &kp LPAR    &kp RPAR  &trans     &trans     &trans     &kp HOME  &kp END   &trans
-&studio_unlock  &trans    &trans  &trans    &trans    &trans     &trans      &trans    &trans     &trans     &trans     &trans    &trans    &trans
+&trans            &trans             &trans  &trans    &trans    &trans                           &trans     &trans     &trans     &trans    &trans    &trans
+&kp TILDE         &kp EXCL           &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                        &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp DELETE
+&trans            &trans             &trans  &trans    &trans    &trans                           &trans     &kp UNDER  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE
+&ext_power EP_ON  &ext_power EP_OFF  &trans  &trans    &trans    &trans     &kp LPAR    &kp RPAR  &trans     &trans     &trans     &kp HOME  &kp END   &trans
+&studio_unlock    &ext_power EP_TOG  &trans  &trans    &trans    &trans     &trans      &trans    &trans     &trans     &trans     &trans    &trans    &trans
             >;
         };
 
