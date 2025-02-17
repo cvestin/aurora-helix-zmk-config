@@ -17,10 +17,19 @@ config BT_MAX_CONN
 config BT_MAX_PAIRED
     default 6
 
+# RGB UNDERGLOW needs to be configured on the dongle in order for it to work with a dongle.
+# Be aware that each LED that is connected to power, draws more power than the board itself.
+#
+# Estimated draw:
+# Board ~600 µA
+# LED   ~1 mA (1000 µA)
 config ZMK_RGB_UNDERGLOW
     select WS2812_STRIP
     select SPI
 
+#
+# DISPLAY
+#
 if ZMK_DISPLAY
 
 config SSD1306
@@ -29,9 +38,11 @@ config SSD1306
 config I2C
     default y
 
-endif # ZMK_DISPLAY
+endif ### ZMK_DISPLAY
 
-
+#
+# LVGL
+#
 if LVGL
 
 config LV_Z_VDB_SIZE
@@ -47,4 +58,4 @@ choice LV_COLOR_DEPTH
     default LV_COLOR_DEPTH_1
 endchoice
 
-endif # LVGL
+endif ### LVGL
