@@ -5,22 +5,17 @@
  */
 
 #include "splitkb_aurora_helix.dtsi"
-#include "splitkb_aurora_helix_physical_layout.dtsi"
 
 / {
     chosen {
         zmk,kscan = &mock_kscan;
-        zmk,physical-layout = &physical_layout;
     };
  
     mock_kscan: mock_kscan_0 {
         compatible = "zmk,kscan-mock";
-        columns = <14>;
-        rows = <5>;
+        columns = <0>;
+        rows = <0>;
         events = <0>;
     };
 };
 
-&physical_layout {
-    transform = <&default_transform>;
-};
