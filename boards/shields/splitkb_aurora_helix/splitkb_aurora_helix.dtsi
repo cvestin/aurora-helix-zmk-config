@@ -5,14 +5,12 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
-#include "splitkb_aurora_helix_physical_layout.dtsi"
 
 / {
 
     chosen {
         zephyr,display = &oled;
         zmk,matrix-transform = &default_transform;
-        zmk,physical_layout = &physical_layout;
     };
 
     default_transform: keymap_transform_0 {

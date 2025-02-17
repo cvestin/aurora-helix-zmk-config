@@ -5,10 +5,12 @@
  */
 
 #include "splitkb_aurora_helix.dtsi"
+#include "splitkb_aurora_helix_physical_layout.dtsi"
 
 / {
     chosen {
         zmk,kscan = &mock_kscan;
+        zmk,physical_layout = &physical_layout;
     };
  
     mock_kscan: mock_kscan_0 {
